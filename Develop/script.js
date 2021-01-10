@@ -24,24 +24,25 @@ const includeUppercase = includeUppercaseElement.checked
 const includeNumbers = includeNumbersElement.checked
 const includeSymbols = includeSymbolsElement.checked
 const password = generatePassword(characterAmount, includeUppercase, includeNumbers, includeSymbols)
+
 })
 
-password.addEventListener(
-  password.innerText = password, )
 
 
 function generatePassword(characterAmount, includeUppercase, includeNumbers, includeSymbols){
   let charCodes = LOWERCASE_CHAR_CODES
   if (includeUppercase) charCodes = charCodes.concat(UPPERCASE_CHAR_CODES)
   if (includeNumbers) charCodes = charCodes.concat(NUMBERS_CHAR_CODES)
-  if (includeSymbols) charCodes = charCodes.concat(SYMBOL_CHAR_CODES)
-  console.log(LOWERCASE_CHAR_CODES);
+  if (includeSymbols) charCodes = charCodes.concat(SYMBOL_CHAR_CODES) 
+
 
   const passwordCharacters = []
   for (let i = 0; i <characterAmount; i++) {
-    const characterCode = charCodes[Math.floor(Math.random()* characterAmount)]
+    const characterCode = charCodes[Math.floor(Math.random()* charCodes.length)]
     passwordCharacters.push (String.fromCharCode(characterCode))
   }
+  
+  return password.innerText= passwordCharacters
 }
 
 function arrayFromLowToHigh(low, high) {
