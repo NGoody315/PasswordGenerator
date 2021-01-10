@@ -16,4 +16,4 @@ When password is generated it is displayed either:
 
 ## Code Explanation
 
-Instead of typing out all the characters and symbols, I used the character code sheet and created the sy
+Instead of typing out all the characters and symbols, I used the character code sheet and created a function that looped arrays based on the charcode lists I made. Because of this the return came back with commas to separate each array and I used the join() method to fix that problem
